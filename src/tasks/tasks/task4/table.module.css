@@ -1,0 +1,25 @@
+.table {
+  border: 1px solid #eee;
+  table-layout: fixed;
+  table-layout: auto;
+  width: 60%;
+  margin-left: 20px;
+  margin-bottom: 150px;
+}
+.table th {
+  font-weight: bold;
+  background: #03abee;
+  border: 1px solid #dddddd;
+  color: white;
+  align-items: center;
+}
+.table td {
+  border: 1px solid #eee;
+  text-align: center;
+}
+.table tbody tr:nth-child(odd) {
+  background: #fff;
+}
+.table tbody tr:nth-child(even) {
+  background: #f7f7f7;
+}

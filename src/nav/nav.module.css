@@ -1,0 +1,34 @@
+.wrapper {
+  background-color: tomato;
+  height: 120vh;
+  width: 140px;
+  background-color: rgb(1, 48, 255);
+  color: white;
+}
+
+.list {
+  width: 2000px;
+  list-style: none;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(46, 44, 44);
+}
+
+.active {
+  overflow: hidden;
+  border-radius: 25px;
+  background-color: rgb(219, 217, 217);
+  color: tomato;
+}
+.title {
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+.li {
+  margin-left: 20px;
+}

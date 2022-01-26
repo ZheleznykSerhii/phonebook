@@ -1,0 +1,32 @@
+[
+    {
+      "avatar": "https://i.guim.co.uk/img/media/7a633730f5f90db3c12f6efc954a2d5b475c3d4a/0_138_5544_3327/master/5544.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=27c09d27ccbd139fd0f7d1cef8f7d41d",
+      "name": "Mango",
+      "isOnline": true,
+      "id": 1812
+    },
+    {
+      "avatar": "https://th-thumbnailer.cdn-si-edu.com/bZAar59Bdm95b057iESytYmmAjI=/1400x1050/filters:focal(594x274:595x275)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/95/db/95db799b-fddf-4fde-91f3-77024442b92d/egypt_kitty_social.jpg",
+      "name": "Kiwi",
+      "isOnline": false,
+      "id": 1137
+    },
+    {
+      "avatar": "https://i.guim.co.uk/img/media/c5e73ed8e8325d7e79babf8f1ebbd9adc0d95409/2_5_1754_1053/master/1754.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=065f279099ded1062688e357b155dc29",
+      "name": "Ajax",
+      "isOnline": true,
+      "id": 1213
+    },
+    {
+      "avatar": "https://media.newyorker.com/photos/590971712179605b11ad7a88/4:3/w_1787,h_1340,c_limit/Jabr-AreCatsDomesticated.jpg",
+      "name": "Jay",
+      "isOnline": true,
+      "id": 1714
+    },
+    {
+      "avatar": "https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg",
+      "name": "Poly",
+      "isOnline": false,
+      "id": 1284
+    }
+  ]
