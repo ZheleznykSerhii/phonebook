@@ -136,36 +136,3 @@ const PhoneListMUI = ({
 }
 
 export default PhoneListMUI
-
-{
-  /* <TextField
-          required
-          label="Add contact`s name"
-          onChange={handleChange}
-          value={name}
-          type="text"
-          name="name"
-          id="name"
-          autoComplete="off"
-          error={Boolean(isCorrectName)}
-          helperText={Boolean(isCorrectName) ? 'The name is not correct' : null}
-        /> */
-}
-;<br />
-
-{
-  /* <TextField
-          id="outlined-number"
-          label="Contact`s number"
-          type="text"
-          onChange={handleChange}
-          value={tel}
-          autoComplete="off"
-          name="tel"
-          required
-          error={Boolean(isCorrectNumber)}
-          helperText={
-            Boolean(isCorrectNumber) ? 'The number is not correct' : null
-          }
-        /> */
-}

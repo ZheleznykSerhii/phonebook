@@ -103,13 +103,6 @@ class Task6 extends React.Component {
       name: '',
       tel: '',
     }))
-    // setTimeout(
-    //   () =>
-    //     this.setState(() => ({
-    //       isOpen: false,
-    //     })),
-    //   2000
-    // )
   }
 
   submitHandler = (e) => {
