@@ -12,23 +12,33 @@ import style from './phonelist.module.css'
 import TextField from '@mui/material/TextField'
 import DeleteIcon from '@mui/icons-material/Delete'
 import SearchIcon from '@mui/icons-material/Search'
-
 import CustomizedSnackbars from './Snackbar'
+import ValidationField from '../ValidationField'
+import BasicModal from '../../../../common/Basicmodal'
 
 const PhoneListMUI = ({
   contacts,
-  onclick,
+  onClick,
   name,
   tel,
   filter,
   handleChange,
   submitHandler,
   removeContact,
-  Loaded,
+  loaded,
   isCorrectName,
   isCorrectNumber,
   addedContact,
+  nullName,
+  nullTel,
+  isOpen,
+  getCloseModal,
 }) => {
+  const validationName =
+    /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/
+  const validationTel =
+    /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?[-.\s]?\d{1,9}/
+
   return (
     <Box>
       <Typography variant="h3" mb={2}>
@@ -43,42 +53,36 @@ const PhoneListMUI = ({
         noValidate
         autoComplete="off"
       >
-        <TextField
-          required
-          label="Add contact`s name"
-          onChange={handleChange}
+        <ValidationField
+          handleChange={handleChange}
           value={name}
-          type="text"
           name="name"
-          id="name"
-          autoComplete="off"
-          error={Boolean(isCorrectName)}
-          helperText={Boolean(isCorrectName) ? 'The name is not correct' : null}
-        />
-        <br />
-
-        <TextField
-          id="outlined-number"
-          label="Contact`s number"
-          type="text"
-          onChange={handleChange}
-          value={tel}
-          autoComplete="off"
-          name="tel"
-          required
-          error={Boolean(isCorrectNumber)}
-          helperText={
-            Boolean(isCorrectNumber) ? 'The number is not correct' : null
+          label="Add contact`s name"
+          validation={validationName}
+          inputErrorText={
+            'The name can only consist of letters, apostrophes, dashes and spaces.'
           }
+          nullValue={nullName}
+        />
+        <ValidationField
+          handleChange={handleChange}
+          value={tel}
+          name="tel"
+          label="Contact`s number"
+          validation={validationTel}
+          inputErrorText={
+            'The phone number must consist of at least 4 numbers and can contain spaces, dashes, letters, parentheses and can start with +'
+          }
+          nullValue={nullTel}
         />
       </Box>
-      <br />
       <Button
-        mt={10}
         variant="outlined"
         color="inherit"
-        disabled={Boolean(name === '' || tel === '')}
-        onClick={onclick}
+        disabled={Boolean(
+          !name.match(validationName) || !tel.match(validationTel)
+        )}
+        onClick={onClick}
       >
         Add contact
       </Button>
@@ -101,7 +105,7 @@ const PhoneListMUI = ({
           </li>
         ))}
       </List>
-      {Loaded && <Preloader />}
+      {loaded && <Preloader />}
       <Box
         mt={10}
         sx={{
@@ -122,11 +126,46 @@ const PhoneListMUI = ({
           InputProps={{
             startAdornment: <SearchIcon position="start"></SearchIcon>,
           }}
+          style={{ width: 400 }}
         />
         {addedContact && <CustomizedSnackbars />}
       </Box>
+      {isOpen && <BasicModal isOpen={isOpen} getCloseModal={getCloseModal} />}
     </Box>
   )
 }
 
 export default PhoneListMUI
+
+{
+  /* <TextField
+          required
+          label="Add contact`s name"
+          onChange={handleChange}
+          value={name}
+          type="text"
+          name="name"
+          id="name"
+          autoComplete="off"
+          error={Boolean(isCorrectName)}
+          helperText={Boolean(isCorrectName) ? 'The name is not correct' : null}
+        /> */
+}
+;<br />
+
+{
+  /* <TextField
+          id="outlined-number"
+          label="Contact`s number"
+          type="text"
+          onChange={handleChange}
+          value={tel}
+          autoComplete="off"
+          name="tel"
+          required
+          error={Boolean(isCorrectNumber)}
+          helperText={
+            Boolean(isCorrectNumber) ? 'The number is not correct' : null
+          }
+        /> */
+}

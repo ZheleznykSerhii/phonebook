@@ -12,7 +12,7 @@ const PhoneList = ({
   handleChange,
   submitHandler,
   removeContact,
-  Loaded,
+  loaded,
   isCorrectName,
   isCorrectNumber,
 }) => {
@@ -104,7 +104,7 @@ const PhoneList = ({
           </li>
         ))}
       </ul>
-      {Loaded ? <Preloader /> : null}
+      {loaded ? <Preloader /> : null}
     </div>
   )
 }

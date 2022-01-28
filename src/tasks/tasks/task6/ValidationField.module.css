@@ -1,0 +1,86 @@
+.input {
+  height: 30px;
+  width: 300px;
+}
+
+.card {
+  border: 1px solid black;
+  padding: 20px;
+  height: 260px;
+  width: 450px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper {
+  margin-left: 30px;
+}
+
+.header {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.button {
+  width: 120px;
+  height: 30px;
+}
+
+.button_submit:active {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.button:hover {
+  font-weight: 600;
+  background-color: rgb(211, 211, 226);
+}
+
+.button:active {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.name {
+  width: 200px;
+}
+
+.tel {
+  width: 200px;
+}
+
+.list {
+  width: 430px;
+  display: flex;
+}
+
+.list:hover {
+  background-color: rgb(211, 211, 226);
+  font-weight: 600;
+}
+
+.notCorrect {
+  height: 20px;
+  font-size: 12px;
+  color: red;
+}
+
+.Correct {
+  height: 20px;
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+}
+
+.between {
+  height: 20px;
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+}
+
+.wrap {
+  width: 500px;
+}
+.input {
+  height: 110px;
+}
