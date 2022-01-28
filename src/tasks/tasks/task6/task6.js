@@ -157,8 +157,6 @@ class Task6 extends React.Component {
         loaded={loaded}
         name={name}
         filter={filter}
-        isCorrectNumber={isCorrectNumber}
-        isCorrectName={isCorrectName}
         isOpen={isOpen}
         onClick={this.OnClickHandler()}
         handleChange={this.handleChange}

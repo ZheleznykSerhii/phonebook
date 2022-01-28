@@ -26,8 +26,6 @@ const PhoneListMUI = ({
   submitHandler,
   removeContact,
   loaded,
-  isCorrectName,
-  isCorrectNumber,
   addedContact,
   nullName,
   nullTel,
